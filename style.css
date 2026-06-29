@@ -1,0 +1,541 @@
+/* ===========================
+   Romantic Date Website
+   style.css
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+
+body{
+
+    background:#090b14;
+
+    color:white;
+
+    font-family:"Montserrat",sans-serif;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+/* ---------- Звезды ---------- */
+
+#stars{
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+    radial-gradient(circle at 20% 20%,rgba(255,255,255,.9) 2px,transparent 3px),
+    radial-gradient(circle at 80% 35%,rgba(255,255,255,.8) 1px,transparent 2px),
+    radial-gradient(circle at 40% 70%,rgba(255,255,255,.7) 2px,transparent 3px),
+    radial-gradient(circle at 70% 80%,rgba(255,255,255,.6) 1px,transparent 2px),
+    radial-gradient(circle at 15% 85%,rgba(255,255,255,.8) 2px,transparent 3px),
+    radial-gradient(circle at 90% 10%,rgba(255,255,255,.8) 1px,transparent 2px);
+
+    animation:starsMove 35s linear infinite;
+
+    opacity:.8;
+
+}
+
+@keyframes starsMove{
+
+    from{
+
+        transform:translateY(0);
+
+    }
+
+    to{
+
+        transform:translateY(-80px);
+
+    }
+
+}
+
+/* ---------- Сердечки ---------- */
+
+#hearts{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+}
+
+/* ---------- Экраны ---------- */
+
+.screen{
+
+    position:absolute;
+
+    inset:0;
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:25px;
+
+}
+
+.screen.active{
+
+    display:flex;
+
+}
+
+/* ---------- Стекло ---------- */
+
+.glass{
+
+    width:min(92%,650px);
+
+    padding:35px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    text-align:center;
+
+    box-shadow:
+
+    0 0 40px rgba(255,255,255,.05),
+
+    0 0 120px rgba(255,0,120,.08);
+
+}
+
+.small{
+
+    color:#ffb5d2;
+
+    letter-spacing:3px;
+
+    margin-bottom:15px;
+
+    font-size:14px;
+
+}
+
+h1{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:58px;
+
+    margin-bottom:20px;
+
+}
+
+h2{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:44px;
+
+    margin-bottom:20px;
+
+}
+
+.subtitle{
+
+    line-height:1.8;
+
+    opacity:.9;
+
+    margin-bottom:35px;
+
+}
+/* ---------- Кнопки ---------- */
+
+button{
+
+    margin-top:30px;
+
+    padding:16px 38px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:linear-gradient(135deg,#ff4f88,#ff7db3);
+
+    color:white;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    box-shadow:0 10px 30px rgba(255,70,140,.35);
+
+}
+
+button:hover{
+
+    transform:translateY(-3px) scale(1.03);
+
+    box-shadow:0 20px 40px rgba(255,70,140,.45);
+
+}
+
+button:active{
+
+    transform:scale(.96);
+
+}
+
+/* ---------- Текст ---------- */
+
+#typingText{
+
+    min-height:180px;
+
+    line-height:1.9;
+
+    font-size:18px;
+
+    opacity:.95;
+
+}
+
+/* ---------- Галерея ---------- */
+
+.galleryBox{
+
+    max-width:760px;
+
+}
+
+#galleryImage{
+
+    width:100%;
+
+    border-radius:22px;
+
+    margin-bottom:20px;
+
+    object-fit:cover;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+
+    transition:.5s;
+
+}
+
+#galleryCaption{
+
+    font-size:18px;
+
+    opacity:.9;
+
+    margin-bottom:20px;
+
+}
+
+/* ---------- Конверт ---------- */
+
+.envelope{
+
+    position:relative;
+
+    width:min(92%,650px);
+
+}
+
+.envelope-front{
+
+    cursor:pointer;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:25px;
+
+    padding:60px 25px;
+
+    text-align:center;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    transition:.5s;
+
+}
+
+.envelope-front:hover{
+
+    transform:scale(1.03);
+
+}
+
+.envelope-front p{
+
+    margin-top:20px;
+
+    font-size:18px;
+
+}
+
+.letter{
+
+    display:none;
+
+    margin-top:20px;
+
+    background:white;
+
+    color:#222;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    line-height:1.9;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.35);
+
+}
+
+.letter.show{
+
+    display:block;
+
+    animation:fadeUp .7s;
+
+}
+
+/* ---------- Вопрос ---------- */
+
+.questionText{
+
+    font-size:28px;
+
+    margin-bottom:15px;
+
+}
+
+.questionSmall{
+
+    opacity:.85;
+
+    margin-bottom:35px;
+
+}
+
+.buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+#noButton{
+
+    background:#444;
+
+}
+
+/* ---------- Финал ---------- */
+
+.finishCard h1{
+
+    font-size:90px;
+
+}
+
+.finishCard h2{
+
+    margin-top:20px;
+
+}
+
+.finishCard h3{
+
+    margin-top:15px;
+
+    color:#ffbdd7;
+
+    font-weight:400;
+
+}
+
+/* ---------- Анимации ---------- */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.glass{
+
+    animation:fadeUp .8s;
+}
+/* ---------- Сердечки ---------- */
+
+.heart{
+
+    position:fixed;
+
+    color:#ff5b97;
+
+    font-size:18px;
+
+    animation:floatHeart 8s linear forwards;
+
+    pointer-events:none;
+
+    opacity:.8;
+
+}
+
+@keyframes floatHeart{
+
+    0%{
+
+        transform:translateY(100vh) scale(.5);
+
+        opacity:0;
+
+    }
+
+    10%{
+
+        opacity:.8;
+
+    }
+
+    100%{
+
+        transform:translateY(-120px) scale(1.2);
+
+        opacity:0;
+
+    }
+
+}
+
+/* ---------- Плавное появление экранов ---------- */
+
+.screen{
+
+    animation:fadeUp .8s ease;
+
+}
+
+/* ---------- Адаптация ---------- */
+
+@media (max-width:768px){
+
+    h1{
+
+        font-size:42px;
+
+    }
+
+    h2{
+
+        font-size:34px;
+
+    }
+
+    .glass{
+
+        padding:25px;
+
+    }
+
+    button{
+
+        width:100%;
+
+        margin-top:20px;
+
+    }
+
+    .buttons{
+
+        flex-direction:column;
+
+    }
+
+    #galleryImage{
+
+        max-height:380px;
+
+        object-fit:cover;
+
+    }
+
+    .letter{
+
+        padding:25px;
+
+        font-size:16px;
+
+    }
+
+}
+
+/* ---------- Полоса прокрутки ---------- */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#ff6b9d;
+
+    border-radius:20px;
+
+}
