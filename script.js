@@ -22,19 +22,19 @@ const photos = [
     text:"Мы ❤️"
 },
 {
-    image:"photos/photo2.jpg.jpeg",
+    image:"photo2.jpg.jpeg",
     text:"Ещё одна история..."
 },
 {
-    image:"photos/photo3.jpg.png",
+    image:"photo3.jpg.png",
     text:"И ещё одно воспоминание."
 },
 {
-    image:"photos/photo4.jpg.jpeg",
+    image:"photo4.jpg.jpeg",
     text:"Спасибо за все моменты."
 },
 {
-    image:"photos/photo5.jpg.jpeg",
+    image:"photo5.jpg.jpeg",
     text:"Самая красивая ❤️"
 }
 ];
