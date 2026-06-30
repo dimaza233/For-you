@@ -18,7 +18,7 @@ const nextPhoto = document.getElementById("nextPhoto");
 
 const photos = [
 {
-    image:"photos/photo1.jpg.jpeg",
+    image:"photo1.jpg.jpeg",
     text:"Мы ❤️"
 },
 {
