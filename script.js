@@ -18,23 +18,23 @@ const nextPhoto = document.getElementById("nextPhoto");
 
 const photos = [
 {
-    image:"photos/photo1.jpg",
+    image:"photos/photo1.jpg.jpeg",
     text:"Мы ❤️"
 },
 {
-    image:"photos/photo2.jpg",
+    image:"photos/photo2.jpg.jpeg",
     text:"Ещё одна история..."
 },
 {
-    image:"photos/photo3.jpg",
+    image:"photos/photo3.jpg.png",
     text:"И ещё одно воспоминание."
 },
 {
-    image:"photos/photo4.jpg",
+    image:"photos/photo4.jpg.jpeg",
     text:"Спасибо за все моменты."
 },
 {
-    image:"photos/photo5.jpg",
+    image:"photos/photo5.jpg.jpeg",
     text:"Самая красивая ❤️"
 }
 ];
